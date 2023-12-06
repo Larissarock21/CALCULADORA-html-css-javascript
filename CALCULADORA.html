@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+    <style>
+        body {
+            color: white;
+            background-color: black;
+            text-align: center;
+            font-size: 25px;
+        }
+        #resposta {
+            margin-top: 20px;
+            font-size: 40px;
+        }
+        input {
+            width: 130px;
+            font-size: 20px;
+            
+        }
+        .button {
+            font-family: 'Permanent Marker', cursive;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>CALCULADORA</h1>
+<input type="number" name="txtn1" id="txtn1">
+<input type="number" name="txtn2" id="txtn2">
+<input type="button" value="Somar" class="button" onclick="somar()">
+<input type="button" value="Subtrair" class="button" onclick="subtrair()">
+<input type="button" value="Dividir" class="button" onclick="dividir()">
+<input type="button" value="Multiplicar" class="button" onclick="multiplicar()">
+<div id="resposta">Resposta:</div>
+<script>
+ function somar() { 
+    var tn1 = window.document.getElementById('txtn1')
+    var tn2 = window.document.getElementById('txtn2')
+    var res = window.document.getElementById('resposta')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value) 
+    var s = n1 + n2
+    res.innerHTML = `Resposta: <strong>${s}</strong> `  
+}
+function subtrair(){
+    var tn1 = window.document.getElementById('txtn1')
+    var tn2 = window.document.getElementById('txtn2')
+    var res = window.document.getElementById('resposta')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value) 
+    var s = n1 - n2
+    res.innerHTML = `Resposta: <strong>${s}</strong> `  
+}
+function dividir(){
+    var tn1 = window.document.getElementById('txtn1')
+    var tn2 = window.document.getElementById('txtn2')
+    var res = window.document.getElementById('resposta')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value) 
+    var d = n1 / n2
+    res.innerHTML = `Resposta: <strong>${d}</strong> `  
+}
+function multiplicar(){
+    var tn1 = window.document.getElementById('txtn1')
+    var tn2 = window.document.getElementById('txtn2')
+    var res = window.document.getElementById('resposta')
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value) 
+    var m = n1 * n2
+    res.innerHTML = `Resposta: <strong>${m}</strong> `  
+}
+</script>    
+</body>
+</html>
